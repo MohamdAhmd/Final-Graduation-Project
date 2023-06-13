@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+  <head>
+    
+    meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>black box</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-onix-digital.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+<<style >
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+section.pricing {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+.pricing .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+
+
+.dropbtn {
+ 
+  color: black;
+  padding: 9px;
+  font-size: 16px;
+  border: none;
+  
+}
+
+.dropbtn:hover, .dropbtn:focus {
+ 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: overlay;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/*.dropdown a:hover {background-color: #ddd;}*/
+
+.show {display: block;}
+</style>
+</head>
+</form>
+
+<body>
+  <form id="form1">
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <%- include('navparts/nav.ejs') %>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+
+
+<!----black box----->
+<div id="tools" class="pricing-tables">
+  <div id="pricing" class="pricing-tables">
+    <div class="tables-left-dec">
+      <img src="assets/images/tables-left-dec.png" alt="">
+    </div>
+    <div class="tables-right-dec">
+      <img src="assets/images/tables-right-dec.png" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Select a suitable <em>plan</em> for your next <span>projects</span></h2>
+            <span>Our Plans</span>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="row">
+        <div class="col-12">
+
+         <div class="item first-item" style="padding:0px;">
+
+
+          <div class="row">
+            <!--#141f8b; background: linear-gradient(to right, #ff8566, #33AEFF);--->
+           <div class="col-4" style="background-image: url('assets/images/oo.webp');"> 
+            <br><br><br>
+            <h4 style="color:white;">A Few Clicks Away From Creating Your Product</h4>
+           
+           
+            <!--<img src="assets/images/pp.jpeg" alt="">-->
+
+           </div>
+
+
+           <div class="col-8">
+         <br><br><br>
+
+          <div class="slidecontainer" style="text-align: left;">
+  
+  
+              <b>Price:</b>
+              <br><br>
+              
+                <input name="price" type="range" min="0" max="1000" value="500" oninput="this.nextElementSibling.value = this.value" class="slider" id="myRange" style="width: 50%;">
+                <output>500</output>
+              
+              
+            </div>
+            <br><br>  
+             <div class="slidecontainer" style="text-align: left;">
+              <b>Rating Review</b>
+              <br><br>
+              <div class="rate">
+                <input type="radio" id="star5"  value="5" name="review_score" action="api/tools/BlackBox" method="post" />
+                <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4"  value="4" name="review_score" action="api/tools/BlackBox" method="post"/>
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3"  value="3" name="review_score" action="api/tools/BlackBox" method="post" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2"  value="2" name="review_score" action="api/tools/BlackBox" method="post" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1"  value="1" name="review_score" action="api/tools/BlackBox" method="post" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+          </div>
+
+
+          <br><br>
+         <div class="slidecontainer" style="text-align: left;">
+
+
+          <form id="contact" style="box-shadow:none; background-image:none;" action="api/tools/BlackBox" method="post" >
+            <label for="email"><b>Category:</b></label>
+            <br><br>
+            <input type="text" class="form-control" id="text" placeholder="Enter Category" name="product_category_name" style="width: 50%;">
+            <fieldset>
+              <button type="submit" id="form-submit" class="main-button" style="background: linear-gradient(to right, #ff8566, #33AEFF);">Predicting</button>
+            </fieldset>
+          </form>
+          
+          
+          <div class="email error" id="err1"></div>
+          <div class="email error" id="err2"></div>
+          <div class="email error" id="err3"></div>
+          <p class="email error" id="data"></p>
+          
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<!--black box end------->
+</form>
+<script>
+const form = document.getElementById('form1');
+const priceError = document.getElementById('err1');
+const review_scoreError = document.getElementById('err2');
+const product_category_nameError = document.getElementById('err3');
+const data = document.getElementById('data');
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+      // reset errors
+      priceError.textContent = '';
+      review_scoreError.textContent = '';
+      product_category_nameError.textContent = '';
+      data.textContent = '';
+      // get values
+    const price = form.price.value;
+    const review_score = form.review_score.value;
+    const product_category_name = form.product_category_name.value;
+    try {
+      const res = await fetch('/api/tools/BlackBox', { 
+        method: 'POST', 
+        body: JSON.stringify({price, review_score, product_category_name}),
+        headers: {'Content-Type': 'application/json'}
+      });
+      const data = await res.json();
+      console.log(data);
+        if (data.errors) {
+          console.log(data.errors);
+          priceError.textContent = data.errors.price;
+          review_scoreError.textContent = data.errors.review_score;
+          product_category_nameError.textContent = data.errors.product_category_name;
+        }
+
+        if (data) {
+
+          console.log(data);
+          data.textContent = data;
+        }
+    }
+    catch (err) {
+        console.log(err);
+    }
+  
+  })
+</script>
+
+
+
+
+<!-------footer------->
+
+<div class="footer-dec">
+<img src="assets/images/footer-dec.png" alt="">
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="about footer-item">
+          <div class="logo">
+            <a href="#"><img src="assets/images/logo90.jpeg" alt="Onix Digital TemplateMo"></a>
+          </div>
+          <a href="#">info@company.com</a>
+          <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="services footer-item">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">SEO Development</a></li>
+            <li><a href="#">Business Growth</a></li>
+            <li><a href="#">Social Media Managment</a></li>
+            <li><a href="#">Website Optimization</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="community footer-item">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Business Ideas</a></li>
+            <li><a href="#">Website Checkup</a></li>
+            <li><a href="#">Page Speed Test</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="subscribe-newsletters footer-item">
+          <h4>Subscribe Newsletters</h4>
+          <p>Get our latest news and ideas to your inbox</p>
+          <form action="#" method="get">
+            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="">
+            <button type="submit" id="form-submit" class="main-button "><i class="fa fa-paper-plane-o"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="copyright">
+          <p>Copyright © 2021 Onix Digital Co., Ltd. All Rights Reserved. 
+          <br>
+          Designed by <a rel="nofollow" href="https://templatemo.com" title="free CSS templates">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-------footer end------->
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap4.min.js"></script>
+<!-- Scripts -->
+<!-- <script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<script>
+// Acc
+  $(document).on("click", ".naccs .menu div", function() {
+    var numberIndex = $(this).index();
+
+    if (!$(this).is("active")) {
+        $(".naccs .menu div").removeClass("active");
+        $(".naccs ul li").removeClass("active");
+
+        $(this).addClass("active");
+        $(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+
+        var listItemHeight = $(".naccs ul")
+          .find("li:eq(" + numberIndex + ")")
+          .innerHeight();
+        $(".naccs ul").height(listItemHeight + "px");
+      }
+  });
+
+  function myFunction1() {
+var x = document.getElementById("myDIV1");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+function myFunction2() {
+var x = document.getElementById("myDIV2");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+
+
+function myFunction3() {
+var x = document.getElementById("myDIV3");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+
+function myFunction4() {
+var x = document.getElementById("myDIV4");
+if (x.style.display === "none") {
+  x.style.display = "block";
+} else {
+  x.style.display = "none";
+}
+}
+
+$(document).ready(function() {
+$('#dtBasicExample').DataTable();
+$('.dataTables_length').addClass('bs-select');
+} );
+
+$(document).ready(function() {
+$('#dtBasicExample1').DataTable();
+$('.dataTables_length').addClass('bs-select');
+} );
+
+
+$(document).ready(function() {
+$('#dtBasicExample2').DataTable();
+$('.dataTables_length').addClass('bs-select');
+} );
+
+
+$(document).ready(function() {
+$('#dtBasicExample3').DataTable();
+$('.dataTables_length').addClass('bs-select');
+} );
+
+
+function myFunction() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+  var dropdowns = document.getElementsByClassName("dropdown-content");
+  var i;
+  for (i = 0; i < dropdowns.length; i++) {
+    var openDropdown = dropdowns[i];
+    if (openDropdown.classList.contains('show')) {
+      openDropdown.classList.remove('show');
+    }
+  }
+}
+}
+</script>
+</body>
+</html>

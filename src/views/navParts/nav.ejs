@@ -1,0 +1,34 @@
+<nav class="main-nav">
+  <!-- ***** Logo Start ***** -->
+  <a href="" class="logo">
+    <img src="assets/images/logo90.jpeg" whidt=110px; height=65px;>
+  </a>
+  <!-- ***** Logo End ***** -->
+  <!-- ***** Menu Start ***** -->
+  <ul class="nav">    
+    <% if(isUser) {%>
+      <li class="scroll-to-section"><a href="/profile">Profile</a></li>
+      <li class="scroll-to-section"><a href="/blackbox">blackbox</a></li>
+      <li class="scroll-to-section"><a href="/FuzzyTrend">FuzzyTrend</a></li>
+      <li class="scroll-to-section"><a href="/Expect">Expectation</a></li>
+      <li class="scroll-to-section"><a href="/salesrate">Sales Rate</a></li>
+      <li class="scroll-to-section"><a href="/finance">Finance</a></li>
+      <li class="scroll-to-section"><a href="/">Contact Us</a></li> 
+      <li class="scroll-to-section"><a href="/">About</a></li> 
+      <li class="scroll-to-section"><div class="main-red-button-hover"><a href="/logout">logout</a></div></li> 
+    <% }else{ %>
+      <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+      <li class="scroll-to-section"><a href="/login">login</a></li>
+      <li class="scroll-to-section"><a href="/finance">Finance</a></li>
+      <li class="scroll-to-section"><a href="/">Contact Us</a></li> 
+      <li class="scroll-to-section"><a href="/">About</a></li> 
+      <li class="scroll-to-section"><div class="main-red-button-hover"><a href="/">Contact Us Now</a></div></li> 
+    <% } %>
+
+  <%#  <li class="scroll-to-section"><a href="/">Services</a></li> %>
+  </ul>    
+  <a class='menu-trigger'>
+      <span>Menu</span>
+  </a>
+  <!-- ***** Menu End ***** -->
+</nav>
