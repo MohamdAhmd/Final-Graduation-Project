@@ -47,12 +47,13 @@ routes.post(
     .withMessage('Please Enter Email')
     .isEmail()
     .withMessage('Invalid Format'),
-  check('password_digest')
-    .not()
-    .isEmpty()
-    .withMessage('Please Enter Password')
-    .isLength({ min: 6 })
-    .withMessage('Password must be at least 6 characters'),
+  //check('password_digest')
+    // .not()
+    // .isEmpty()
+    // .withMessage('Please Enter Password')
+    // .isLength({ min: 6 })
+    // .withMessage('Password must be at least 6 characters'),
+    
   controllers.cheak
 )
 
