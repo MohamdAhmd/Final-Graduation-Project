@@ -6,11 +6,11 @@ import { log } from 'console'
 const logger = new LoggerService('user.controller')
 const info = new tools()
 export const getBlackBox = (req: Request, res: Response) => {
-  // res.render('blackbox', {
-  //   isUser: res.locals.user
-  //})
-  res.send("jcdiuhdufhvu");
-  console.log("hfvkvjcmfjcj");
+  res.render('blackbox', {
+    isUser: res.locals.user
+  })
+  //res.send("jcdiuhdufhvu");
+  //console.log("hfvkvjcmfjcj");
   
 }
 export const BlackBox = async (req: Request, res: Response) => {
