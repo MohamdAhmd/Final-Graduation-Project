@@ -21,7 +21,7 @@ export const premium = 'premium'
 export const super_user = 'super_user'
 
 const routes = Router()
-routes.get('/blackbox', verifyUser, verifyRole(user), getBlackBox)
+routes.get('/blackbox',/* verifyUser, verifyRole(user),*/ getBlackBox)
 
 routes.post(
   '/BlackBox',
@@ -38,10 +38,10 @@ routes.post(
   ],
   BlackBox
 )
-routes.get('/Expect', verifyUser, verifyRole(premium), getExpect)
-routes.post('/expect', verifyUser, verifyRole(premium), Expect)
+routes.get('/Expect', /*verifyUser, verifyRole(premium),*/ getExpect)
+routes.post('/expect',/* verifyUser, verifyRole(premium), */Expect)
 
-routes.get('/FuzzyTrend', verifyUser, verifyRole(super_user), getFuzzyTrend)
+routes.get('/FuzzyTrend',/* verifyUser, verifyRole(super_user),*/ getFuzzyTrend)
 routes.post(
   '/FuzzyTrend1',
   verifyUser,
@@ -80,7 +80,7 @@ routes.post(
 routes.post('/GoldenPattern',  verifyUser, verifyRole(super_user), GoldenPattern)
 routes.post('/Trend',  verifyUser, verifyRole(premium), Trend)
 
-routes.get('/salesrate', verifyUser, verifyRole(premium), getSalesRate)
+routes.get('/salesrate', /*verifyUser, verifyRole(premium), */getSalesRate)
 routes.post('/salesrate',/*verifyUser, verifyRole(premium),*/ postSalesRate)
 
 routes.use('/', (req, res) => {
