@@ -79,7 +79,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
               <div class="section-heading">
-                <h2>Explore all Data to find your Product<em>Enter the data </em> you want to know the most <span>Popular Products</span></h2>
+                <h2>Explore all Data to find your Product <em>Enter the data </em> you want to know the most <span> Popular Products</span></h2>
                 <span>FUZZY TOOL</span>
               
           </div>
@@ -217,7 +217,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                       <button onclick="myFunction2()" style="background: linear-gradient(to right, #ff8566, #33AEFF);">Analysis</button>
                       <!--<button onclick="myFunction3()" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>-->
 
-                      <button id="myBtn" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>
+                      <button id="myBtn1" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>
 
 
                       <div id="myModal" class="modal">
@@ -376,7 +376,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
                       <button onclick="myFunction3()" style="background: linear-gradient(to right, #ff8566, #33AEFF);">Analysis</button>
                       <!--<button onclick="myFunction3()" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>-->
 
-                      <button id="myBtn" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>
+                      <button id="myBtn2" style="background: linear-gradient(to right, #ff8566, #33AEFF);">flowchart</button>
 
 
                       <div id="myModal" class="modal">
@@ -628,6 +628,58 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn1.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn2.onclick = function() {
   modal.style.display = "block";
 }
 

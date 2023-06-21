@@ -54,6 +54,11 @@ app.get('/', (_req: Request, res: Response) => {
     isUser: res.locals.user
   })
 })
+
+app.get('/test', (_req: Request, res: Response) => {
+  res.render('dashboard/public/user')
+})
+
 app.get('/profile', (_req: Request, res: Response) => {
   res.render('profile', {
     user: res.locals.user,
