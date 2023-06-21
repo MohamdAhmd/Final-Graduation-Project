@@ -55,8 +55,16 @@ app.get('/', (_req: Request, res: Response) => {
   })
 })
 
-app.get('/test', (_req: Request, res: Response) => {
-  res.render('dashboard/public/user')
+app.get('/user', (_req: Request, res: Response) => {
+  res.render('admin/user')
+})
+
+app.get('/roles', (_req: Request, res: Response) => {
+  res.render('admin/roles')
+})
+
+app.get('/group', (_req: Request, res: Response) => {
+  res.render('admin/group')
 })
 
 app.get('/profile', (_req: Request, res: Response) => {
